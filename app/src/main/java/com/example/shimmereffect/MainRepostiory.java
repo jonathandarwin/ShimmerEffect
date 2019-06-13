@@ -17,13 +17,12 @@ public class MainRepostiory {
 
     public void getData(){
         final Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 listener.success(data());
             }
-        };
-        handler.postDelayed(runnable, 5000);
+        }, 3000);
     }
 
     private List<MainModel> data(){
